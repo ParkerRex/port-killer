@@ -2,6 +2,9 @@
 
 A lightweight macOS menu bar app that shows your development ports and lets you kill them with one click. Built with Tauri for a tiny 2.5MB app size.
 
+![Port Killer Menu Bar](public/ss-1.png)
+![Port Killer Main Window](public/ss-2.png)
+
 ## What it does
 
 - **Click the ⚡ icon in your menu bar** to see all your dev servers

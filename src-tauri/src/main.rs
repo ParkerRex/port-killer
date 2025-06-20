@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    port_manager_lib::run()
+    port_killer_lib::run()
 }
