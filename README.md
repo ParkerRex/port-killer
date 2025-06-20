@@ -1,5 +1,7 @@
 # Port Killer
 
+> **Note:** I got sick of asking Claude to find the PID and kill it, so I asked Claude to make a Tauri app and boom - 40 mins later here we are haha. Enjoy!
+
 A lightweight macOS menu bar app that shows your development ports and lets you kill them with one click. Built with Tauri for a tiny 2.5MB app size.
 
 ![Port Killer Menu Bar](public/ss-1.png)
