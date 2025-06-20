@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun create:*)",
+      "Bash(bunx create-tauri-app:*)",
+      "Bash(rmdir:*)",
+      "Bash(ls:*)",
+      "Bash(bun install:*)",
+      "Bash(bun add:*)",
+      "Bash(bunx tailwindcss init:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(bun run:*)",
+      "Bash(cargo build:*)",
+      "Bash(cargo run:*)",
+      "Bash(chmod:*)",
+      "Bash(./run.sh)",
+      "Bash(pkill:*)",
+      "Bash(xattr:*)",
+      "Bash(true)",
+      "Bash(./test.sh)",
+      "Bash(open http://localhost:1420)",
+      "Bash(./debug.sh)",
+      "Bash(system_profiler:*)",
+      "Bash(RUST_LOG=debug bun run tauri dev 2 >& 1)",
+      "Bash(curl:*)",
+      "Bash(open:*)",
+      "Bash(bun remove:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo test)",
+      "Bash(cargo test:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)"
+    ],
+    "deny": []
+  }
+}
