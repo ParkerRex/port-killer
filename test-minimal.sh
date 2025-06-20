@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Kill any existing processes
-pkill -f "port-manager" 2>/dev/null || true
+pkill -f "port-killer" 2>/dev/null || true
 pkill -f "cargo" 2>/dev/null || true
 pkill -f "vite" 2>/dev/null || true
 

@@ -2641,7 +2641,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "port-manager"
+name = "port-killer"
 version = "0.1.0"
 dependencies = [
  "serde",

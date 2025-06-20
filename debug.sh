@@ -7,7 +7,7 @@ echo -e "\nChecking Tauri CLI..."
 bunx tauri --version
 
 echo -e "\nChecking for running processes..."
-ps aux | grep -E "(port-manager|cargo|vite)" | grep -v grep
+ps aux | grep -E "(port-killer|cargo|vite)" | grep -v grep
 
 echo -e "\nChecking localhost:1420..."
 curl -s http://localhost:1420 | head -n 5

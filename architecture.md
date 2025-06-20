@@ -1,4 +1,4 @@
-# Port Manager - Architecture Design
+# Port Killer - Architecture Design
 
 ## Technology Stack
 - **Framework**: Tauri 2.0

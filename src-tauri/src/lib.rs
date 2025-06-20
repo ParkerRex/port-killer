@@ -106,7 +106,7 @@ pub fn run() {
             
             // Create tray icon
             let _tray = TrayIconBuilder::with_id("main")
-                .tooltip("Port Manager")
+                .tooltip("Port Killer")
                 .icon(app.default_window_icon().unwrap().clone())
                 .on_tray_icon_event(|tray, event| {
                     match event {

@@ -1,149 +1,72 @@
-# Port Manager
+# Port Killer
 
-A lightweight macOS menu bar app for monitoring and managing development ports. Built with Tauri and React.
+A lightweight macOS menu bar app that shows your development ports and lets you kill them with one click. Built with Tauri for a tiny 2.5MB app size.
 
-## Features
+## What it does
 
-- **⚡ Menu Bar Integration** - Quick access from macOS menu bar with one-click port termination
-- **🚀 Smart Port Detection** - Automatically identifies and categorizes development services
-- **🎯 Developer-Focused** - Filters out non-development ports by default (hide system processes like Cursor, Adobe, etc.)
-- **🎨 Service Categorization** - Organizes ports by type: Frontend, Backend, Database
-- **⚡ Real-time Updates** - Auto-refreshes every 2 seconds
-- **🔍 Instant Search** - Filter by port number, process name, or framework
-- **✅ Safe Process Termination** - Two-click confirmation system to prevent accidents
-- **🪶 Lightweight** - ~2.5MB app size (vs 85MB+ with Electron)
+- **Click the ⚡ icon in your menu bar** to see all your dev servers
+- **Click any port to kill it instantly** - no more hunting for PIDs
+- **Only shows development ports** (3000, 5173, 8080, etc.) - no system noise
+- **Tiny 2.5MB app** built with Rust + Tauri (not Electron!)
 
-## Supported Frameworks
+## Quick Start
 
-Automatically recognizes 50+ development tools including:
-- **Frontend**: Next.js, Vite, React, Vue, Angular, Astro, Nuxt, Gatsby
-- **Backend**: FastAPI, Django, Flask, Express, Rails, Laravel, Spring Boot
-- **Databases**: PostgreSQL, MySQL, MongoDB, Redis, Supabase, Elasticsearch
+1. Download the latest `.dmg` from [Releases](https://github.com/yourusername/port-killer/releases)
+2. Drag Port Killer to Applications
+3. Launch it - you'll see a ⚡ in your menu bar
+4. Click the ⚡ to see and kill your dev ports
 
-## Installation
+## Build from Source
 
-### Prerequisites
-- macOS 10.15+
-- [Bun](https://bun.sh) runtime
-- Rust (for building from source)
-
-### Install from Release
-1. Download the latest `.dmg` from [Releases](https://github.com/yourusername/port-manager/releases)
-2. Open the DMG and drag Port Manager to Applications
-3. Launch from Applications or Spotlight
-
-### Build from Source
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/port-manager.git
-cd port-manager
-
-# Install dependencies
+git clone https://github.com/yourusername/port-killer.git
+cd port-killer
 bun install
-
-# Run in development
-bun run tauri dev
-
-# Build for production
 bun run tauri build
 ```
 
-## Usage
+## How to Use
 
-### Menu Bar (System Tray)
-1. Click the menu bar icon (⚡) to see active development ports
-2. Click any port to instantly terminate the process
-3. Select "Refresh" to update the port list
-4. Select "Quit" to exit the application
+**Menu Bar:**
+- Click ⚡ to see ports
+- Click any port to kill it
+- That's it!
 
-### Main Window
-1. Click the menu bar icon to open the main window
-2. View all active development ports organized by category
-3. Use the search bar to filter specific ports or services
-4. Toggle "Show development ports only" to see all system ports
-5. Click "Kill Process" twice to terminate a service (safer two-step process)
-6. Press `ESC` to hide the window
+**Main Window** (optional):
+- Opens when you launch the app
+- Search, filter, and categorize ports
+- Two-click kill for safety
+- Press ESC to hide
 
-### Supported Development Ports
-The menu bar automatically shows ports in these ranges:
-- **3000-3010**: React, Next.js, Node.js apps
-- **4000-4010**: Various frameworks
-- **5000-5010**: Flask, Python frameworks
-- **5173**: Vite
-- **5432**: PostgreSQL
-- **6379**: Redis
-- **8000-8010**: Django, other frameworks
-- **8080-8090**: Common web servers
-- **9000-9010**: PHP-FPM, other services
-- **9200**: Elasticsearch
-- **27017**: MongoDB
-- **1420**: Tauri dev server
+## Supported Ports
 
-## Project Structure
+Automatically detects:
+- **3000-3010** - React, Next.js, Node.js
+- **4000-4010** - Various frameworks  
+- **5000-5010** - Flask, Python
+- **5173** - Vite
+- **5432** - PostgreSQL
+- **6379** - Redis
+- **8000-8010** - Django
+- **8080-8090** - Web servers
+- **And more...**
 
-```
-port-manager/
-├── src/                    # React frontend
-│   ├── components/         # UI components
-│   ├── hooks/             # Custom React hooks
-│   ├── utils/             # Port categorization logic
-│   └── types/             # TypeScript definitions
-├── src-tauri/             # Rust backend
-│   ├── src/
-│   │   ├── commands/      # Tauri commands (port scanning, process management)
-│   │   └── lib.rs         # App initialization & tray menu
-│   └── tauri.conf.json    # Tauri configuration
-└── package.json           # Frontend dependencies
-```
+## Why Port Killer?
 
-## Technical Details
-
-- **Frontend**: React 18 + TypeScript + Vite + Tailwind CSS
-- **Backend**: Rust + Tauri 2.0
-- **Port Scanning**: Uses `lsof` command to list network connections
-- **Process Management**: Native macOS process termination
-
-## Configuration
-
-The app uses smart defaults but can be customized:
-
-- **Refresh Interval**: 2 seconds (hardcoded in `usePorts` hook)
-- **Default Filter**: Development ports only (toggle available in UI)
-- **Window Size**: 400x600px (configured in `tauri.conf.json`)
-
-## Development
-
-```bash
-# Start development server
-bun run dev
-
-# Run Tauri in development mode
-bun run tauri dev
-
-# Build for production
-bun run tauri build
-
-# Type checking
-bun run tsc
-```
+- **Faster than** `lsof -i :3000` + finding the PID + `kill -9`
+- **Safer than** killing the wrong process
+- **Lighter than** Activity Monitor or other Electron apps
+- **Focused on** development ports only
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+PRs welcome! The codebase is small and easy to understand.
 
-## Future Enhancements
+## Built With
 
-- [ ] Port history tracking
-- [ ] Custom port labels/aliases
-- [ ] Export port list
-- [ ] Windows/Linux support
-- [ ] Keyboard shortcuts
-- [ ] Port conflict detection
-- [ ] Integration with Docker containers
+- [Tauri](https://tauri.app) - Rust-based app framework
+- React + TypeScript - UI
+- `lsof` - Port detection
 
 ## License
 

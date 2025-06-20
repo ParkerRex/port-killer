@@ -1,7 +1,7 @@
-# Testing Guide for Port Manager
+# Testing Guide for Port Killer
 
 ## Overview
-This guide explains how to add and run unit tests for the Port Manager application, focusing on the Rust backend code.
+This guide explains how to add and run unit tests for the Port Killer application, focusing on the Rust backend code.
 
 ## Running Tests
 

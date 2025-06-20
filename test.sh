@@ -1,9 +1,9 @@
 #!/bin/bash
-echo "Testing Port Manager..."
+echo "Testing Port Killer..."
 
 # Kill any existing processes
-pkill -f "port-manager" 2>/dev/null || true
-pkill -f "cargo.*port-manager" 2>/dev/null || true
+pkill -f "port-killer" 2>/dev/null || true
+pkill -f "cargo.*port-killer" 2>/dev/null || true
 
 # Run with debug output
 cd src-tauri

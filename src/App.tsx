@@ -25,7 +25,7 @@ function App() {
           <div>
             <h1 className="text-xl font-bold flex items-center gap-2">
               <span className="text-2xl">⚡</span>
-              Port Manager
+              Port Killer
             </h1>
             <p className="text-xs text-gray-400 mt-0.5">
               Monitor and manage your development servers
