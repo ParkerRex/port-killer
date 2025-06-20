@@ -11,7 +11,7 @@ A lightweight macOS menu bar app that shows your development ports and lets you 
 
 ## Quick Start
 
-1. Download the latest `.dmg` from [Releases](https://github.com/yourusername/port-killer/releases)
+1. Download the latest `.dmg` from [Releases](https://github.com/ParkerRex/port-killer/releases)
 2. Drag Port Killer to Applications
 3. Launch it - you'll see a ⚡ in your menu bar
 4. Click the ⚡ to see and kill your dev ports
@@ -19,7 +19,7 @@ A lightweight macOS menu bar app that shows your development ports and lets you 
 ## Build from Source
 
 ```bash
-git clone https://github.com/yourusername/port-killer.git
+git clone https://github.com/ParkerRex/port-killer.git
 cd port-killer
 bun install
 bun run tauri build
